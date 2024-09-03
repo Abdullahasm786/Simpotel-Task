@@ -6,7 +6,7 @@ body {
 }
 
 nav {
-    background-color: #FF6F61;;
+    background-color: #FF6F61;
     padding: 10px 0;
 }
 
@@ -28,118 +28,144 @@ nav {
     padding: 10px 20px;
     display: block;
     transition: background-color 0.3s ease;
-    font-weight: bold; /* Bold text in the navbar */
+    font-weight: bold;
 }
+
 .logo img {
-    height: 30px; /* Adjust the height of the logo image */
-    width: auto; /* Maintain aspect ratio of the image */
+    height: 30px;
+    width: auto;
 }
+
 .container {
     display: flex;
     width: 100%;
     height: 100%;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+.left-section, .right-section {
+    flex: 1 1 50%; /* Equal width sections */
+    padding: 20px;
+    box-sizing: border-box; /* Includes padding in the element's total width and height */
 }
 
 .left-section {
-    flex: 1 1 50%; /* Takes up 50% of the container width */
-    padding: 20px; /* Adjust the padding as needed */
-    /*box-sizing: border-box; /* Includes padding in the element's total width and height */
-    background-color: #FFFDD0; /* Light gray background for left section */
+    background-color: #FFFDD0;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    align-items: center;
 }
 
 .right-section {
-    flex: 1 1 50%; /* Takes up the remaining 50% of the container width */
-    /*padding: 20px; /* Adjust the padding as needed */
-    /*box-sizing: border-box; /* Includes padding in the element's total width and height */
-    /*background-color: #c0c0c0; /* Slightly darker gray background for right section */
     display: flex;
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
+    justify-content: center;
+    align-items: center;
+    background-color: #FF6F61;
+    padding: 20px;
 }
 
 .right-section img {
-    max-width: 100%; /* Ensure the image does not exceed the container's width */
-    height: 100; /* Maintain the image's aspect ratio */
-    max-height: 100%;
-    width: auto;
-}
-.container {
-    position: relative; /* Ensure the container is the reference point for absolute positioning */
+    max-width: 100%;
+    height: auto;
 }
 
 p {
     font-weight: bold;
     font-size: 50px;
-    /*position: absolute; /* Allows for absolute positioning within the container */
-    top: 5; /* Aligns the paragraph at the top of the container */
-    left: 10; /* Aligns the paragraph at the left edge of the container */
-    margin: 20; /* Ensures no additional margins affect positioning */
+    margin: 20px;
 }
 
-
 .image-container {
-    width: 50%; /* Takes up the left half of the page */
-    height: 100%; /* Ensures the container is the full height of the viewport */
-    overflow: hidden; /* Hides any overflow from the image */
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
 }
 
 img {
-    height: 100%; /* Ensures the image takes up the full height of the container */
-    width: auto; /* Maintains the aspect ratio of the image */
-    display: block; /* Ensures there is no inline spacing below the image */
+    height: 100%;
+    width: auto;
+    display: block;
 }
+
 h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
-    font-size: 18px; /* Makes the font size smaller */
-    text-align: left; /* Aligns the text to the left */
+    font-size: 18px;
+    text-align: left;
+    position: relative;
+    top: 20px;
+    left: 10px;
 }
 
 .left-button {
-    background-color: #007bff; /* Blue background color */
-    color: white; /* White text color */
-    border: none; /* Removes default border */
-    padding: 15px 30px; /* Increases padding inside the button */
-    font-size: 20px; /* Increases the font size */
-    border-radius: 5px; /* Adds rounded corners */
-    cursor: pointer; /* Changes the cursor to a pointer */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-
 .my-button {
-    background-color: #FF6F61; /* Coral background color */
-    color: white; /* White text color */
-    border: none; /* Removes default border */
-    margin-top: 60%     ;
-    padding: 15px 10px; /* Adjusts padding to make the button rectangular */
-    font-size: 16px; /* Sets the font size */
-    border-radius: 0; /* Removes rounded corners for a rectangular shape */
-    cursor: pointer; /* Changes the cursor to a pointer */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-    
-    width: 250px; /* Sets the width of the button */
-    height: 60px; /* Sets the height of the button */
-    position:static; /* Positions the button relative to its nearest positioned ancestor */
-    left: 0; /* Aligns the button to the left edge of the page */
-    bottom: 0; /* Positions the button at the bottom of the page */
-    margin: 20px; /* Adds margin to keep it from touching the edges */
+    background-color: #FF6F61;
+    color: white;
+    border: none;
+    margin-top: 60%;
+    padding: 15px 10px;
+    font-size: 16px;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 250px;
+    height: 60px;
+    position: static;
+    left: 0;
+    bottom: 0;
+    margin: 20px;
     margin-left: -60%;
 }
 
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .left-section, .right-section {
+        flex: 1 1 100%; /* Full width sections on tablets */
+    }
 
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.5em; /* Smaller size for smaller screens */
+    .my-button {
+        margin-left: 0; /* Adjust the button position for medium screens */
+        margin-top: 20px;
     }
 }
-h1 {
-    position: relative;
-    top: 20px; /* Moves the h1 down by 20px */
-    left: 10px; /* Moves the h1 to the right by 10px */
-    font-size: 20px; /* Example of changing the font size */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .container {
+        flex-direction: column; /* Stack sections vertically on mobile */
+    }
+
+    .my-button {
+        width: 100%; /* Full-width button on mobile */
+        height: 50px;
+        margin-left: 0;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 2em; /* Adjust font size for smaller screens */
+        text-align: center;
+    }
 }
