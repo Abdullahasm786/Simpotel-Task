@@ -1,0 +1,145 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: coral;
+}
+
+nav {
+    background-color: #FF6F61;;
+    padding: 10px 0;
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+    font-weight: bold; /* Bold text in the navbar */
+}
+.logo img {
+    height: 30px; /* Adjust the height of the logo image */
+    width: auto; /* Maintain aspect ratio of the image */
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left-section {
+    flex: 1 1 50%; /* Takes up 50% of the container width */
+    padding: 20px; /* Adjust the padding as needed */
+    /*box-sizing: border-box; /* Includes padding in the element's total width and height */
+    background-color: #FFFDD0; /* Light gray background for left section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.right-section {
+    flex: 1 1 50%; /* Takes up the remaining 50% of the container width */
+    /*padding: 20px; /* Adjust the padding as needed */
+    /*box-sizing: border-box; /* Includes padding in the element's total width and height */
+    /*background-color: #c0c0c0; /* Slightly darker gray background for right section */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.right-section img {
+    max-width: 100%; /* Ensure the image does not exceed the container's width */
+    height: 100; /* Maintain the image's aspect ratio */
+    max-height: 100%;
+    width: auto;
+}
+.container {
+    position: relative; /* Ensure the container is the reference point for absolute positioning */
+}
+
+p {
+    font-weight: bold;
+    font-size: 50px;
+    /*position: absolute; /* Allows for absolute positioning within the container */
+    top: 5; /* Aligns the paragraph at the top of the container */
+    left: 10; /* Aligns the paragraph at the left edge of the container */
+    margin: 20; /* Ensures no additional margins affect positioning */
+}
+
+
+.image-container {
+    width: 50%; /* Takes up the left half of the page */
+    height: 100%; /* Ensures the container is the full height of the viewport */
+    overflow: hidden; /* Hides any overflow from the image */
+}
+
+img {
+    height: 100%; /* Ensures the image takes up the full height of the container */
+    width: auto; /* Maintains the aspect ratio of the image */
+    display: block; /* Ensures there is no inline spacing below the image */
+}
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 18px; /* Makes the font size smaller */
+    text-align: left; /* Aligns the text to the left */
+}
+
+.left-button {
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* Removes default border */
+    padding: 15px 30px; /* Increases padding inside the button */
+    font-size: 20px; /* Increases the font size */
+    border-radius: 5px; /* Adds rounded corners */
+    cursor: pointer; /* Changes the cursor to a pointer */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+
+.my-button {
+    background-color: #FF6F61; /* Coral background color */
+    color: white; /* White text color */
+    border: none; /* Removes default border */
+    margin-top: 60%     ;
+    padding: 15px 10px; /* Adjusts padding to make the button rectangular */
+    font-size: 16px; /* Sets the font size */
+    border-radius: 0; /* Removes rounded corners for a rectangular shape */
+    cursor: pointer; /* Changes the cursor to a pointer */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    
+    width: 250px; /* Sets the width of the button */
+    height: 60px; /* Sets the height of the button */
+    position:static; /* Positions the button relative to its nearest positioned ancestor */
+    left: 0; /* Aligns the button to the left edge of the page */
+    bottom: 0; /* Positions the button at the bottom of the page */
+    margin: 20px; /* Adds margin to keep it from touching the edges */
+    margin-left: -60%;
+}
+
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5em; /* Smaller size for smaller screens */
+    }
+}
+h1 {
+    position: relative;
+    top: 20px; /* Moves the h1 down by 20px */
+    left: 10px; /* Moves the h1 to the right by 10px */
+    font-size: 20px; /* Example of changing the font size */
+}

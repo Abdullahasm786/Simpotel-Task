@@ -1,0 +1,129 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* Section Two */
+.section-two {
+    display: flex;
+    flex-direction: column; /* Stack the content on small screens */
+    padding: 20px;
+    min-height: 100vh;
+    background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+}
+
+.section-two .left-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px; /* Adds spacing between the image and text sections on small screens */
+}
+
+.section-two .left-content .stacked-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-two .left-content img {
+    width: 100%;
+    height: 250px; /* Sets a fixed height for all images */
+    object-fit: cover; /* Ensures the images cover the area without stretching */
+    border-radius: 10px;
+}
+
+.section-two .right-content {
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; /* Centers text on small screens */
+}
+
+.section-two .right-content .content-box {
+    background-color: #ff6f61;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.section-two .right-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.section-two .right-content p {
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+    .section-two {
+        flex-direction: row; /* Row layout on larger screens */
+    }
+
+    .section-two .left-content {
+        width: 50%;
+    }
+
+    .section-two .right-content {
+        width: 50%;
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    .section-two .right-content h2 {
+        font-size: 36px;
+    }
+
+    .section-two .right-content p {
+        font-size: 18px;
+    }
+}
+#sec-two {
+    height:95%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.right-content {
+    width: 40%;
+    background-color: #FF6F61; /* Adjust color as needed */
+    margin-top: 6%;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 80%; /* Adjust the height as needed */
+    border-radius: 0; /* Remove rounded edges */
+}
+
+.right-content h2, .right-content p {
+    color: black;
+    margin: 30;
+}
+
+.right-content p {
+    margin-top: 50px;
+}
+.h2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
